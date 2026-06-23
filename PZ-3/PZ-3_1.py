@@ -10,8 +10,3 @@ if all([a > 0, b > 0, c > 0, a+b>c, a+c>b, b+c>a]):
     print("ИСТИНА" if is_right else "ЛОЖЬ")
 else:
     print("Не треугольник")
-
-# 2. Даны три числа. Вывести вначале наименьшее, а затем наибольшее из данных чисел.
-
-nums = [float(input(f"Введите число {i+1}: ")) for i in range(3)]
-print(f"Наименьшее: {min(nums)}\nНаибольшее: {max(nums)}")

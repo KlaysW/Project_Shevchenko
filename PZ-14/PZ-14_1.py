@@ -1,5 +1,6 @@
-# Вариант 32
-# Задание 1. В соответствии с номером варианта перейти по ссылке на прототип. Реализовать его в IDE PyCharm Community с применением пакета tk. Получить интерфейс максимально приближенный к оригиналу.
+# Вариант 32.
+# Задание 1. В соответствии с номером варианта перейти по ссылке на прототип.
+# Реализовать его в IDE PyCharm Community с применением пакета tk. Получить интерфейс максимально приближенный к оригиналу.
 
 import tkinter as tk
 from tkinter import ttk
@@ -108,32 +109,5 @@ row += 1
 
 submit_button = tk.Button(form_frame, text="Submit", bg="#5dade2", fg="white", font=("TimesNewRoman", 10, "bold"), bd=0, padx=24, pady=10, command=submit_form)
 submit_button.grid(row=row, column=0, columnspan=2, sticky="w")
-
-# Задание 2. "В последовательности на n целых чисел умножить все элементы на первый максимальный элемент."
-import random
-
-def solve_task_2():
-    try:
-        count = int(entry_input.get())
-        nums = [random.randint(-10, 10) for _ in range(count)]
-        
-        m_val = max(nums)
-        res = [x * m_val for x in nums]
-        
-        label_output.config(text=f"Сгенерированные числа: {nums}\nМаксимальное число: {m_val}\nРезультат: {res}")
-    except ValueError:
-        label_output.config(text="Ошибка ввода. Введите целое число.")
-
-task2_win = tk.Toplevel(root)
-task2_win.title("Задание 2")
-task2_win.geometry("400x200")
-
-tk.Label(task2_win, text="Введите количество цифр:").pack(pady=5)
-entry_input = tk.Entry(task2_win, width=40)
-entry_input.pack(pady=5)
-
-tk.Button(task2_win, text="Выполнить", command=solve_task_2).pack(pady=5)
-label_output = tk.Label(task2_win, text="Результат: ", justify="left")
-label_output.pack(pady=10)
 
 root.mainloop()

@@ -1,5 +1,5 @@
 # Вариант 32.
-# 1. Если в матрице имеются положительные элементы, то вывести TRUE, иначе FALSE.
+# 2. В матрице найти сумму и произведение элементов строки N (N задать с клавиатуры). reduce
 
 import random
 
@@ -9,11 +9,6 @@ matrix = [[random.randint(-10, 10) for _ in range(cols)] for _ in range(rows)]
 print("Исходная матрица:")
 for row in matrix:
     print(row)
-
-has_positive = any(item > 0 for row in matrix for item in row)
-print(f"\nНаличие положительных элементов: {has_positive}")
-
-# 2. В матрице найти сумму и произведение элементов строки N (N задать с клавиатуры). reduce
 
 n = int(input("\nВведите номер строки N (начиная с 0): "))
 
